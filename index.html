@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#a50908"><title>सांगीतिक शृङ्खला २०२७ | Japan Tour</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Inter:wght@400;500;700&family=Noto+Sans+Devanagari:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><i class="orb o1"></i><i class="orb o2"></i><i class="orb o3"></i></div>
+<canvas id="fx" aria-hidden="true"></canvas>
+<header class="nav"><a class="logo" href="#top">सांगीतिक शृङ्खला <b>२०२७</b></a><nav><a href="#schedule">Schedule</a><a href="#editor">Make your photo</a></nav></header>
+<main id="top">
+<section class="hero">
+ <svg class="ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="c" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs><text><textPath href="#c">OSAKA ✦ NAGOYA ✦ TOKYO ✦ OSAKA ✦ NAGOYA ✦ TOKYO ✦</textPath></text></svg>
+ <p class="eyebrow">गल्कोट समाज जापान प्रस्तुत गर्दछ</p>
+ <h1 class="title"><span>सांगीतिक</span><span>शृङ्खला</span><em>२०२७</em></h1>
+ <p class="lead">नेपाली मौलिक संगीत, संस्कृति र कलाकारहरूसँग जापानका तीन शहरमा विशेष साँझ।</p>
+ <div class="hero-actions"><a class="btn" href="#schedule">View dates</a></div>
+ <button class="eq" id="eq" type="button" aria-label="Toggle music bars" title="Tap me"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></button>
+ <div class="poster tilt" id="poster"><img src="assets/main-poster.jpg" alt="सांगीतिक शृङ्खला २०२७ पोस्टर"></div>
+</section>
+<div class="marquee" aria-hidden="true"><div>गल्कोट समाज जापान ✦ संगीत ✦ संस्कृति ✦ एकता ✦ JAPAN TOUR 2026–2027 ✦ गल्कोट समाज जापान ✦ संगीत ✦ संस्कृति ✦ एकता ✦ JAPAN TOUR 2026–2027 ✦</div></div>
+
+<section class="sec" id="schedule">
+ <p class="eyebrow">Choose a city</p><h2>तीन शहर, तीन विशेष साँझ</h2>
+ <div class="tabs" role="tablist">
+  <button role="tab" class="on" data-i="0">Osaka</button><button role="tab" data-i="1">Nagoya</button><button role="tab" data-i="2">Tokyo</button>
+ </div>
+ <article class="panel" id="panel" aria-live="polite">
+  <div class="big" id="pCity">OSAKA</div>
+  <div class="pcol"><p class="jp" id="pJp">ओसाका</p><p class="date" id="pDate">31 DEC 2026</p><p class="time" id="pTime">17:30 – 24:00</p>
+  <a class="btn" id="pMap" target="_blank" rel="noopener" href="https://maps.app.goo.gl/nVocQ5EmrgiMLWYb9">Open Google Maps ↗</a></div>
+  <div class="count" id="count"><div><b id="cd">0</b>days</div><div><b id="ch">0</b>hrs</div><div><b id="cm">0</b>min</div><div><b id="cs">0</b>sec</div></div>
+ </article>
+</section>
+
+<section class="sec" id="editor">
+ <p class="eyebrow">Make your own</p><h2>Photo overlay editor</h2>
+ <p class="muted">Upload a photo, drag to move, use the corner dot to resize. Nothing is cropped.</p>
+ <div class="ed">
+  <div class="ctl">
+   <label class="btn up">＋ Upload photo<input type="file" id="photoInput" accept="image/*"></label>
+   <div class="row"><button id="zoomOut" type="button">−</button><button id="zoomIn" type="button">＋</button><button id="reset" type="button">Reset</button></div>
+   <label class="rl" for="zoom">Zoom <span id="zoomValue">100%</span></label><input id="zoom" type="range" min="25" max="250" value="100">
+   <button id="download" class="btn dl" type="button" disabled>⬇ Download Image</button>
+  </div>
+  <div class="stage-wrap"><div class="stage" id="stage"><img class="stage-overlay" src="assets/event-overlay.png" alt="Event overlay"><div class="photo-layer" id="photoLayer" tabindex="0"><img id="uploadedPhoto" alt="Your photo"><span class="resize-handle"></span></div></div></div>
+ </div>
+</section>
+</main>
+<footer>© 2026–2027 · सांगीतिक शृङ्खला २०२७ · Tap anywhere for ♪</footer>
+<script src="motion.js"></script>
+<script src="app.js"></script>
+</body></html>
